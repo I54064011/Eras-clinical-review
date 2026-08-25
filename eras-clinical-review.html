@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ERAS 圍術期照護共識指引：脊椎融合與髖膝關節置換 — 臨床回顧</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --nejm-red:#B7202E;
+    --nejm-red-dark:#8C1621;
+    --ink:#1C1C1A;
+    --ink-secondary:#5B584E;
+    --paper:#FBFAF6;
+    --paper-panel:#F3EEE1;
+    --paper-panel-red:#FBF0EF;
+    --rule:#D2CDBC;
+    --rule-dark:#1C1C1A;
+    --ev-high:#B7202E;
+    --ev-mod:#B77A2E;
+    --ev-low:#DAD5C2;
+    --ev-low-text:#5B584E;
+    --serif:'Noto Serif TC','Georgia','Times New Roman',serif;
+    --sans:'Noto Sans TC','Helvetica Neue',Arial,sans-serif;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    font-size:16.5px;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation:none!important;transition:none!important;}
+  }
+  a{color:var(--nejm-red-dark);}
+  h1,h2,h3,h4{font-family:var(--serif);font-weight:700;color:var(--ink);margin:0;}
+
+  /* ---------- masthead ---------- */
+  .masthead-bar{height:5px;background:var(--nejm-red);width:100%;}
+  .masthead{
+    max-width:var(--maxw);margin:0 auto;padding:.9rem 1.5rem .7rem;
+    display:flex;justify-content:space-between;align-items:flex-end;
+    border-bottom:2px solid var(--ink);
+    flex-wrap:wrap;gap:.4rem;
+  }
+  .masthead-name{
+    font-family:var(--sans);font-weight:700;font-size:.78rem;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--nejm-red);
+  }
+  .masthead-sub{
+    font-family:var(--sans);font-size:.72rem;color:var(--ink-secondary);
+    letter-spacing:.02em;
+  }
+  .masthead-meta{
+    font-family:var(--sans);font-size:.72rem;color:var(--ink-secondary);
+    text-align:right;letter-spacing:.02em;
+  }
+  .masthead-meta a{
+    color:var(--nejm-red-dark);text-decoration:none;font-weight:700;
+    border-bottom:1px solid var(--nejm-red-dark);
+  }
+  .masthead-meta a:hover{color:var(--ink);border-color:var(--ink);}
+
+  /* ---------- article header ---------- */
+  .article-header{max-width:var(--maxw);margin:0 auto;padding:2.4rem 1.5rem 1.6rem;}
+  .kicker{
+    font-family:var(--sans);font-weight:700;font-size:.78rem;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--nejm-red);
+    margin-bottom:.7rem;
+  }
+  .article-title{
+    font-size:2.35rem;line-height:1.28;font-weight:900;
+    max-width:44rem;
+  }
+  .article-dek{
+    font-family:var(--sans);font-weight:400;color:var(--ink-secondary);
+    font-size:1.05rem;margin-top:.9rem;max-width:40rem;line-height:1.6;
+  }
+  .byline{
+    margin-top:1.4rem;padding-top:1rem;border-top:1px solid var(--rule);
+    font-family:var(--sans);font-size:.82rem;color:var(--ink-secondary);
+    display:flex;gap:1.6rem;flex-wrap:wrap;
+  }
+  .byline b{color:var(--ink);font-weight:600;}
+
+  /* ---------- key points panel ---------- */
+  .keypoints{
+    max-width:var(--maxw);margin:1.8rem auto 0;padding:0 1.5rem;
+  }
+  .keypoints-box{
+    background:var(--paper-panel);border-left:4px solid var(--nejm-red);
+    padding:1.3rem 1.6rem;
+  }
+  .keypoints-box h4{
+    font-family:var(--sans);font-size:.75rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--nejm-red-dark);margin-bottom:.7rem;
+  }
+  .keypoints-box ul{margin:0;padding-left:1.1rem;}
+  .keypoints-box li{margin-bottom:.45rem;font-size:.98rem;}
+  .keypoints-box li:last-child{margin-bottom:0;}
+
+  /* ---------- layout grid ---------- */
+  .layout{
+    max-width:var(--maxw);margin:2.4rem auto 0;padding:0 1.5rem 4rem;
+    display:grid;grid-template-columns:200px 1fr;gap:3rem;
+    align-items:start;
+  }
+  .toc{position:sticky;top:1.6rem;font-family:var(--sans);}
+  .toc-label{
+    font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ink-secondary);margin-bottom:.8rem;font-weight:700;
+  }
+  .toc ol{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule);}
+  .toc li{border-bottom:1px solid var(--rule);}
+  .toc a{
+    display:block;padding:.6rem 0;text-decoration:none;color:var(--ink);
+    font-size:.86rem;line-height:1.35;
+  }
+  .toc a span{color:var(--nejm-red);font-weight:700;margin-right:.4rem;}
+  .toc a:hover{color:var(--nejm-red-dark);}
+
+  .content{min-width:0;max-width:44rem;}
+  section{margin-bottom:3.2rem;scroll-margin-top:1.5rem;}
+  .sec-eyebrow{
+    font-family:var(--sans);font-size:.74rem;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--nejm-red);font-weight:700;
+    margin-bottom:.4rem;
+  }
+  .sec-title{font-size:1.6rem;font-weight:700;margin-bottom:1.1rem;line-height:1.35;}
+  section p{margin:0 0 1rem;}
+  section h4.sub{font-size:1.12rem;font-weight:700;margin:1.6rem 0 .7rem;}
+  .lede{font-size:1.08rem;color:var(--ink-secondary);}
+
+  .citebox{
+    font-family:var(--sans);font-size:.86rem;color:var(--ink-secondary);
+    border:1px solid var(--rule);padding:.9rem 1.1rem;margin:1.1rem 0 1.6rem;
+    background:#fff;
+  }
+  .citebox b{color:var(--ink);}
+
+  /* ---------- phase timeline (signature element) ---------- */
+  .phase-timeline{
+    display:flex;border:1px solid var(--ink);margin:1.6rem 0 2.2rem;
+    font-family:var(--sans);
+  }
+  .phase-timeline > div{
+    padding:.85rem 1rem;position:relative;color:#fff;
+  }
+  .phase-timeline > div:not(:last-child){border-right:1px solid rgba(255,255,255,.35);}
+  .phase-timeline .p-name{font-weight:700;font-size:.82rem;letter-spacing:.04em;}
+  .phase-timeline .p-range{display:block;font-size:.72rem;opacity:.85;margin-top:.15rem;}
+  .phase-pre{background:var(--ev-mod);}
+  .phase-intra{background:var(--nejm-red);}
+  .phase-post{background:var(--ink);}
+
+  /* ---------- evidence legend ---------- */
+  .legend{
+    display:flex;flex-wrap:wrap;gap:.5rem 1.2rem;align-items:center;
+    font-family:var(--sans);font-size:.78rem;color:var(--ink-secondary);
+    border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+    padding:.75rem 0;margin:0 0 1.6rem;
+  }
+  .legend b{color:var(--ink);font-weight:700;margin-right:.2rem;}
+
+  /* ---------- pills / badges ---------- */
+  .pill{
+    display:inline-flex;align-items:center;font-family:var(--sans);
+    font-size:.68rem;font-weight:600;padding:.18rem .5rem;
+    letter-spacing:.02em;white-space:nowrap;border-radius:1px;
+  }
+  .ev-high{background:var(--ev-high);color:#fff;}
+  .ev-mod{background:var(--ev-mod);color:#fff;}
+  .ev-low{background:var(--ev-low);color:var(--ev-low-text);}
+  .ev-none{border:1px solid var(--ink-secondary);color:var(--ink-secondary);}
+  .rec-strong{background:var(--ink);color:#fff;}
+  .rec-weak{border:1px solid var(--ink);color:var(--ink);background:#fff;}
+  .rec-notrec{border:1px solid var(--nejm-red);color:var(--nejm-red-dark);background:#fff;}
+
+  /* ---------- recommendation table ---------- */
+  .rec-table{border-top:2px solid var(--ink);margin:0 0 2rem;}
+  .rec-table-head{
+    display:grid;grid-template-columns:44px 1fr 190px;gap:1.1rem;
+    padding:.55rem 0;border-bottom:1px solid var(--ink);
+    font-family:var(--sans);font-size:.68rem;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--ink-secondary);font-weight:700;
+  }
+  .rec-row{
+    display:grid;grid-template-columns:44px 1fr 190px;gap:1.1rem;
+    padding:1.05rem 0;border-bottom:1px solid var(--rule);
+  }
+  .rec-row.notrec-row{background:var(--paper-panel-red);}
+  .rec-table > .rec-row:last-child{border-bottom:2px solid var(--ink);}
+  .rec-num{font-family:var(--serif);font-weight:700;color:var(--nejm-red);font-size:1.15rem;line-height:1.2;}
+  .rec-name{font-weight:600;font-size:1rem;}
+  .rec-body{font-weight:400;color:var(--ink);font-size:.94rem;margin-top:.25rem;}
+  .subitem{margin-top:.75rem;padding-top:.7rem;border-top:1px dotted var(--rule);}
+  .subitem:first-of-type{margin-top:.6rem;}
+  .subitem-label{font-weight:600;font-size:.88rem;}
+  .subitem-text{font-weight:400;color:var(--ink-secondary);font-size:.88rem;margin-top:.15rem;}
+  .rec-grade{display:flex;flex-direction:column;gap:.4rem;padding-top:.15rem;}
+  .grade-line{display:flex;gap:.35rem;flex-wrap:wrap;}
+  .grade-spacer{height:.05rem;}
+  .grade-sub-offset{margin-top:1.55rem;}
+
+  @media (max-width:820px){
+    .rec-table-head{display:none;}
+    .rec-row{grid-template-columns:1fr;gap:.4rem;}
+    .rec-num{display:inline-block;}
+    .rec-grade{flex-direction:row;flex-wrap:wrap;margin-top:.5rem;}
+    .grade-sub-offset{margin-top:0;}
+  }
+
+  /* ---------- plain data tables (Taiwan section) ---------- */
+  .datatable{width:100%;border-collapse:collapse;margin:0 0 1.8rem;font-size:.92rem;}
+  .datatable caption{
+    text-align:left;font-family:var(--sans);font-size:.72rem;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--ink-secondary);
+    margin-bottom:.5rem;font-weight:700;
+  }
+  .datatable thead th{
+    text-align:left;font-family:var(--sans);font-weight:700;font-size:.76rem;
+    letter-spacing:.03em;color:var(--ink);
+    border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);
+    padding:.55rem .6rem;
+  }
+  .datatable td{padding:.6rem .6rem;border-bottom:1px solid var(--rule);vertical-align:top;}
+  .datatable tbody tr:last-child td{border-bottom:2px solid var(--ink);}
+  .datatable td.num, .datatable th.num{text-align:right;}
+  .datatable tbody tr:hover{background:var(--paper-panel);}
+
+  /* ---------- callout ---------- */
+  .callout{
+    border:1px solid var(--ink);padding:1.3rem 1.5rem;margin:1.4rem 0 1.8rem;
+    background:#fff;
+  }
+  .callout .callout-label{
+    font-family:var(--sans);font-size:.72rem;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--nejm-red);font-weight:700;margin-bottom:.6rem;
+  }
+  .callout p:last-child{margin-bottom:0;}
+
+  .badge-flag{
+    display:inline-block;font-family:var(--sans);font-size:.66rem;font-weight:700;
+    letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--nejm-red);
+    padding:.15rem .5rem;margin-bottom:.7rem;
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    border-top:3px double var(--ink);max-width:var(--maxw);margin:0 auto;
+    padding:2rem 1.5rem 3rem;font-family:var(--sans);
+  }
+  footer h4{
+    font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ink-secondary);margin-bottom:.9rem;font-weight:700;
+  }
+  footer ol{margin:0;padding-left:1.3rem;color:var(--ink-secondary);font-size:.85rem;}
+  footer li{margin-bottom:.5rem;}
+  .footer-note{
+    margin-top:1.8rem;padding-top:1.2rem;border-top:1px solid var(--rule);
+    font-size:.78rem;color:var(--ink-secondary);line-height:1.6;
+  }
+
+  /* misc */
+  .two-col-note{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;margin:1.2rem 0 1.6rem;}
+  @media (max-width:700px){.two-col-note{grid-template-columns:1fr;}}
+  .mini-card{border:1px solid var(--rule);padding:1rem 1.1rem;}
+  .mini-card h5{font-size:.92rem;font-weight:700;margin-bottom:.4rem;}
+  .mini-card p{font-size:.86rem;color:var(--ink-secondary);margin:0;}
+</style>
+</head>
+<body>
+
+<div class="masthead-bar"></div>
+<div class="masthead">
+  <div>
+    <div class="masthead-name">ERAS Clinical Review</div>
+    <div class="masthead-sub">術後加速康復（ERAS）指引 · 復健科臨床應用整理</div>
+  </div>
+  <div class="masthead-meta">特別報告 · 2026 年 8 月<br>整理範圍：脊椎融合／髖膝關節置換<br><a href="eras-tw-coverage.html">台灣 ERAS 收案總覽（四大術式）→</a></div>
+</div>
+
+<div class="article-header">
+  <div class="kicker">Special Report</div>
+  <h1 class="article-title">ERAS Society 圍術期照護共識指引：<br>腰椎融合與髖膝關節置換</h1>
+  <p class="article-dek">逐段整理兩篇 ERAS Society 共識聲明的建議項目、證據等級與建議強度；並額外查核台灣目前 ERAS 的實際病人收案條件，因原始指引本身並未定義臨床收案標準。</p>
+  <div class="byline">
+    <div><b>整理依據</b>　Spine J 2021;21:729–752 ／ Acta Orthop 2020;91:3–19</div>
+    <div><b>適用讀者</b>　復健科臨床應用</div>
+    <div><b>更新</b>　2026-08-25</div>
+  </div>
+</div>
+
+<div class="keypoints">
+  <div class="keypoints-box">
+    <h4>重點摘要</h4>
+    <ul>
+      <li>兩篇指引皆採 GRADE 系統，分別產出 <b>腰椎融合 22 個項目、28 項建議</b> 與 <b>髖膝關節置換 17 個核心項目</b>（另含多項「不建議常規使用」的介入）。</li>
+      <li>兩篇文獻談的是「怎麼照護」，<b>並未定義病人收案／排除條件</b>；「收案」字樣僅指文獻回顧的納入標準，非臨床篩選門檻。</li>
+      <li>台灣健保署 ERAS 給付計畫（114 年公告，<b>115 年 8 月 4 日修正擴大</b>）已涵蓋<b>四大術式</b>：髖膝關節置換、冠狀動脈繞道手術、肺臟重大手術、大腸直腸重大手術；共同門檻為 <b>70 歲以上、門診階段收案</b>，其中僅髖膝關節置換另需 <b>ASA III–IV 級</b>。完整四術式收案細節見〈<a href="eras-tw-coverage.html">台灣 ERAS 收案總覽</a>〉。脊椎手術 ERAS 仍未納入正式健保收案標準，僅見院內自主推動路徑。</li>
+      <li>早期下床活動、多模式止痛、不常規使用引流管／導尿管，是兩篇指引中與復健介入最直接相關的一致建議。</li>
+    </ul>
+  </div>
+</div>
+
+<div class="layout">
+
+  <nav class="toc">
+    <div class="toc-label">目錄</div>
+    <ol>
+      <li><a href="#s1"><span>一</span>共同架構</a></li>
+      <li><a href="#s2"><span>二</span>腰椎融合 ERAS</a></li>
+      <li><a href="#s3"><span>三</span>髖膝關節置換 ERAS</a></li>
+      <li><a href="#s4"><span>四</span>收案條件的落差</a></li>
+      <li><a href="#s5"><span>五</span>台灣實際收案標準</a></li>
+      <li><a href="#s6"><span>六</span>復健科臨床提醒</a></li>
+    </ol>
+  </nav>
+
+  <main class="content">
+
+    <!-- ================= SECTION 1 ================= -->
+    <section id="s1">
+      <div class="sec-eyebrow">Section 01</div>
+      <h2 class="sec-title">一、兩篇文獻的共同架構</h2>
+      <p class="lede">兩篇皆由 ERAS Society 主導、多專科（外科／脊椎外科、麻醉、護理、物理治療師等）共識產出，方法學一致。</p>
+      <p>證據評分採 <b>GRADE 系統</b>：證據等級分為高／中／低／極低；建議強度分為強／弱——即使證據等級低，只要利大於弊、傷害風險低，仍可給予「強建議」，這也是為什麼在下方表格中會看到不少「證據：低」卻「強建議」的組合。</p>
+      <p>最終產出皆是「<b>圍術期照護項目清單</b>」，而不是病人收案準則，這點會在第四節詳細說明。</p>
+    </section>
+
+    <!-- ================= SECTION 2 ================= -->
+    <section id="s2">
+      <div class="sec-eyebrow">Section 02 · Spine J 2021;21:729–752</div>
+      <h2 class="sec-title">二、腰椎融合手術 ERAS</h2>
+      <p class="lede">文獻回顧 66,432 篇 → 最終納入 256 篇 → 產出 <b>21 個 ERAS 項目、28 項建議</b>（Prehabilitation 因證據不足被排除，未列入正式建議）。</p>
+      <div class="citebox"><b>指引適用範圍</b>：僅涵蓋腰椎融合手術，<b>明確排除頸椎手術、前位手術、複雜畸形／脊柱側彎手術</b>——這些族群不適用此指引的實證內容。</div>
+
+      <div class="phase-timeline">
+        <div class="phase-pre" style="flex:8"><span class="p-name">術前 PRE</span><span class="p-range">項目 1–8</span></div>
+        <div class="phase-intra" style="flex:8"><span class="p-name">術中／圍術期 INTRA</span><span class="p-range">項目 9–16</span></div>
+        <div class="phase-post" style="flex:6"><span class="p-name">術後 POST</span><span class="p-range">項目 17–22</span></div>
+      </div>
+
+      <div class="legend">
+        <span><b>證據等級</b></span>
+        <span class="pill ev-high">高</span>
+        <span class="pill ev-mod">中</span>
+        <span class="pill ev-low">低</span>
+        <span style="margin-left:.6rem;"><b>建議強度</b></span>
+        <span class="pill rec-strong">強建議</span>
+        <span class="pill rec-weak">弱建議</span>
+        <span class="pill rec-notrec">不建議 / 證據不足</span>
+      </div>
+
+      <h4 class="sub">術前（項目 1–8）</h4>
+      <div class="rec-table">
+        <div class="rec-table-head"><div>編號</div><div>ERAS Society 建議內容</div><div>證據／強度</div></div>
+
+        <div class="rec-row">
+          <div class="rec-num">01</div>
+          <div><div class="rec-name">術前衛教</div><div class="rec-body">建議常規給予病人術前衛教與諮詢。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-low">低</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row notrec-row">
+          <div class="rec-num">02</div>
+          <div><div class="rec-name">Prehabilitation（術前強化訓練）</div><div class="rec-body">3 篇 RCT 系統性回顧顯示證據不足，<b>未列入正式建議</b>，需針對高齡、體能衰弱、多重共病等族群做進一步研究。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill rec-notrec">證據不足</span></div></div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">03</div>
+          <div>
+            <div class="rec-name">術前營養評估與介入</div>
+            <div class="rec-body">應常規進行術前營養評估；營養不良者應接受介入補充。</div>
+          </div>
+          <div class="rec-grade">
+            <div class="grade-line"><span class="pill ev-low">低</span><span class="pill rec-strong">強建議</span></div>
+            <div class="grade-line"><span class="pill ev-low">低</span><span class="pill rec-strong">強建議</span></div>
+          </div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">04</div>
+          <div><div class="rec-name">術前戒菸</div><div class="rec-body">建議術前至少戒菸 4 週。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">05</div>
+          <div><div class="rec-name">術前戒酒</div><div class="rec-body">術前 4–8 週戒酒可降低術後併發症。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">06</div>
+          <div>
+            <div class="rec-name">術前禁食與碳水化合物治療</div>
+            <div class="rec-body">清流質禁食至術前 2 小時、固體食物至術前 6 小時。</div>
+            <div class="subitem"><div class="subitem-label">口服碳水化合物負荷</div><div class="subitem-text">兩篇 RCT 均未證實優勢，證據不足以做常規建議。</div></div>
+          </div>
+          <div class="rec-grade">
+            <div class="grade-line"><span class="pill ev-high">高</span><span class="pill rec-strong">強建議</span></div>
+            <div class="grade-line grade-sub-offset"><span class="pill rec-notrec">證據不足</span></div>
+          </div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">07</div>
+          <div>
+            <div class="rec-name">術前用藥</div>
+            <div class="rec-body">不建議常規給予鎮靜劑以減少術前焦慮。</div>
+            <div class="subitem"><div class="subitem-label">多模式止痛前置給藥</div><div class="subitem-text">建議術前給予 acetaminophen、NSAID、gabapentinoid 作為多模式鴉片節省策略的一環。</div></div>
+          </div>
+          <div class="rec-grade">
+            <div class="grade-line"><span class="pill ev-low">低</span><span class="pill rec-strong">強建議</span></div>
+            <div class="grade-line grade-sub-offset"><span class="pill ev-mod">中</span><span class="pill rec-strong">強建議</span></div>
+          </div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">08</div>
+          <div><div class="rec-name">貧血處理</div><div class="rec-body">術前應評估並矯正貧血。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-low">低</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+      </div>
+
+      <h4 class="sub">術中／圍術期（項目 9–16，原文歸類於「Intraoperative」章節）</h4>
+      <div class="rec-table">
+        <div class="rec-table-head"><div>編號</div><div>ERAS Society 建議內容</div><div>證據／強度</div></div>
+
+        <div class="rec-row">
+          <div class="rec-num">09</div>
+          <div>
+            <div class="rec-name">抗生素預防與皮膚消毒</div>
+            <div class="rec-body">廣效抗生素覆蓋金黃色葡萄球菌，必要時延長手術可重複給藥。</div>
+            <div class="subitem"><div class="subitem-label">術前夜間抗菌敷料</div><div class="subitem-text">尚無強證據支持。</div></div>
+            <div class="subitem"><div class="subitem-label">皮膚消毒</div><div class="subitem-text">酒精性優碘或 chlorhexidine 溶液皆可。</div></div>
+          </div>
+          <div class="rec-grade">
+            <div class="grade-line"><span class="pill ev-high">高</span><span class="pill rec-strong">強建議</span></div>
+            <div class="grade-line grade-sub-offset"><span class="pill ev-low">低</span><span class="pill rec-weak">中度</span></div>
+            <div class="grade-line"><span class="pill ev-high">高</span><span class="pill rec-strong">強建議</span></div>
+          </div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">10</div>
+          <div><div class="rec-name">標準麻醉方案</div><div class="rec-body">現代化全身麻醉（含神經肌肉阻斷劑、神經軸技術）依當地資源使用於多模式麻醉。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">11</div>
+          <div><div class="rec-name">預防術中低體溫</div><div class="rec-body">術前預熱＋術中主動加溫，維持圍術期正常體溫。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-high">高</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">12</div>
+          <div><div class="rec-name">手術技巧</div><div class="rec-body">依個案手術目標、術者經驗、當地設備決定，<b>無單一術式（含微創）證實獨立優於其他</b>。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-low">低</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">13</div>
+          <div>
+            <div class="rec-name">局部／區域麻醉止痛技術</div>
+            <div class="rec-body">用以改善術後疼痛控制、降低鴉片類藥物需求：</div>
+            <div class="subitem"><div class="subitem-label">鞘內嗎啡（intrathecal morphine）</div></div>
+            <div class="subitem"><div class="subitem-label">硬脊膜外止痛（epidural analgesia）</div></div>
+            <div class="subitem"><div class="subitem-label">局部神經阻斷（locoregional blocks）</div></div>
+            <div class="subitem"><div class="subitem-label">傷口局部浸潤（wound infiltration）</div></div>
+          </div>
+          <div class="rec-grade">
+            <div class="grade-spacer"></div>
+            <div class="grade-line"><span class="pill ev-high">高</span><span class="pill rec-strong">強建議</span></div>
+            <div class="grade-line"><span class="pill ev-high">高</span><span class="pill rec-strong">強建議</span></div>
+            <div class="grade-line"><span class="pill ev-high">高</span><span class="pill rec-weak">弱建議</span></div>
+            <div class="grade-line"><span class="pill ev-high">高</span><span class="pill rec-strong">強建議</span></div>
+          </div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">14</div>
+          <div>
+            <div class="rec-name">輸液管理</div>
+            <div class="rec-body">維持接近等容狀態。</div>
+            <div class="subitem"><div class="subitem-label">目標導向輸液</div><div class="subitem-text">1–2 節融合不需要；明顯共病者可考慮。</div></div>
+          </div>
+          <div class="rec-grade">
+            <div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-strong">強建議</span></div>
+            <div class="grade-line grade-sub-offset"><span class="pill ev-low">低</span><span class="pill rec-strong">強建議</span></div>
+          </div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">15</div>
+          <div><div class="rec-name">術後早期經口進食</div><div class="rec-body">建議儘早恢復正常飲食。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-low">低</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">16</div>
+          <div><div class="rec-name">導尿管使用</div><div class="rec-body">短節段選擇性腰椎融合<b>不建議常規置放</b>；有使用則應儘早移除並密切監測。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-weak">弱建議</span></div></div>
+        </div>
+      </div>
+
+      <h4 class="sub">術後（項目 17–22）</h4>
+      <div class="rec-table">
+        <div class="rec-table-head"><div>編號</div><div>ERAS Society 建議內容</div><div>證據／強度</div></div>
+
+        <div class="rec-row">
+          <div class="rec-num">17</div>
+          <div><div class="rec-name">術後止痛</div><div class="rec-body">建議常規使用多模式止痛以改善疼痛控制、減少鴉片類藥物使用。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">18</div>
+          <div><div class="rec-name">術後噁心嘔吐（PONV）</div><div class="rec-body">風險評估＋多模式預防；救援治療時應換用不同類別止吐藥。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-high">高</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">19</div>
+          <div><div class="rec-name">引流管使用</div><div class="rec-body">短節段腰椎融合<b>不建議常規使用引流管</b>。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">20</div>
+          <div>
+            <div class="rec-name">血栓預防</div>
+            <div class="rec-body">鼓勵早期下床活動＋機械式預防（彈性襪／間歇性加壓）。</div>
+            <div class="subitem"><div class="subitem-label">藥物性抗凝</div><div class="subitem-text">僅限高風險族群；無法對常規使用做出建議。</div></div>
+          </div>
+          <div class="rec-grade">
+            <div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-strong">強建議</span></div>
+            <div class="grade-line grade-sub-offset"><span class="pill ev-low">低</span><span class="pill rec-strong">強建議</span></div>
+          </div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">21</div>
+          <div><div class="rec-name">早期活動與物理治療</div><div class="rec-body">建議儘早下床活動並及早介入物理治療。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-low">低</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">22</div>
+          <div><div class="rec-name">持續改善與稽核</div><div class="rec-body">建議定期稽核與回饋，維持團隊對 ERAS 流程的遵從度。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-low">低</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div class="callout-label">脊椎融合特別提醒</div>
+        <p>指引<b>明確排除頸椎手術、前位手術、複雜脊柱畸形／側彎手術</b>——這些手術類型不能直接套用本篇證據。另外，NSAIDs 對骨融合的疑慮：文獻認為短期（&lt;2 週）使用證據上不影響融合率，可作為多模式止痛的一部分（除非有個別禁忌）。</p>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 3 ================= -->
+    <section id="s3">
+      <div class="sec-eyebrow">Section 03 · Acta Orthop 2020;91:3–19</div>
+      <h2 class="sec-title">三、髖／膝關節置換 ERAS</h2>
+      <p class="lede">文獻回顧範圍 1966–2018，產出 <b>17 個核心項目</b>，另有多項經文獻檢視後被明確列為「<b>不建議常規使用</b>」的介入——這些「不建議」項目在臨床上同樣重要。</p>
+
+      <div class="phase-timeline">
+        <div class="phase-pre" style="flex:5"><span class="p-name">術前</span><span class="p-range">衛教／優化／禁食</span></div>
+        <div class="phase-intra" style="flex:11"><span class="p-name">麻醉／止痛／術中因子</span><span class="p-range">標準麻醉至抗血栓</span></div>
+        <div class="phase-post" style="flex:6"><span class="p-name">術後</span><span class="p-range">營養／活動／出院標準</span></div>
+      </div>
+
+      <div class="legend">
+        <span><b>證據等級</b></span>
+        <span class="pill ev-high">高</span>
+        <span class="pill ev-mod">中</span>
+        <span class="pill ev-low">低</span>
+        <span style="margin-left:.6rem;"><b>建議強度</b></span>
+        <span class="pill rec-strong">強建議</span>
+        <span class="pill rec-notrec">不建議常規使用</span>
+      </div>
+
+      <h4 class="sub">術前</h4>
+      <div class="rec-table">
+        <div class="rec-table-head"><div>編號</div><div>ERAS Society 建議內容</div><div>證據／強度</div></div>
+
+        <div class="rec-row">
+          <div class="rec-num">01</div>
+          <div><div class="rec-name">術前衛教</div><div class="rec-body">建議常規衛教；雖未證實可獨立加速達到出院標準，但可降低術前焦慮。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-low">低</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">02</div>
+          <div>
+            <div class="rec-name">術前風險因子優化</div>
+            <div class="subitem"><div class="subitem-label">戒菸</div><div class="subitem-text">術前 4 週以上。</div></div>
+            <div class="subitem"><div class="subitem-label">戒酒</div><div class="subitem-text">高酒精攝取者應介入戒酒方案。</div></div>
+            <div class="subitem"><div class="subitem-label">貧血</div><div class="subitem-text">應識別、檢查並矯正。</div></div>
+          </div>
+          <div class="rec-grade">
+            <div class="grade-spacer"></div>
+            <div class="grade-line"><span class="pill ev-high">高</span><span class="pill rec-strong">強建議</span></div>
+            <div class="grade-line"><span class="pill ev-low">低</span><span class="pill rec-strong">強建議</span></div>
+            <div class="grade-line"><span class="pill ev-high">高</span><span class="pill rec-strong">強建議</span></div>
+          </div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">03</div>
+          <div><div class="rec-name">術前禁食</div><div class="rec-body">清流質至術前 2 小時、固體食物至術前 6 小時。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row notrec-row">
+          <div class="rec-num">—</div>
+          <div>
+            <div class="rec-name">不建議常規使用的術前介入</div>
+            <div class="subitem"><div class="subitem-label">術前物理治療（單獨介入）</div><div class="subitem-text">效果太小，未證實加速出院。</div></div>
+            <div class="subitem"><div class="subitem-label">術前碳水化合物負荷</div><div class="subitem-text">未證實加速出院或降低併發症。</div></div>
+            <div class="subitem"><div class="subitem-label">術前鎮靜／抗焦慮藥</div><div class="subitem-text">不建議常規使用。</div></div>
+          </div>
+          <div class="rec-grade">
+            <div class="grade-spacer"></div>
+            <div class="grade-line"><span class="pill rec-notrec">不建議</span></div>
+            <div class="grade-line"><span class="pill rec-notrec">不建議</span></div>
+            <div class="grade-line"><span class="pill rec-notrec">不建議</span></div>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="sub">麻醉與止痛</h4>
+      <div class="rec-table">
+        <div class="rec-table-head"><div>編號</div><div>ERAS Society 建議內容</div><div>證據／強度</div></div>
+
+        <div class="rec-row">
+          <div class="rec-num">04</div>
+          <div><div class="rec-name">標準麻醉方案</div><div class="rec-body">現代化全身麻醉與神經軸麻醉皆可作為多模式方案的一部分使用。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row notrec-row">
+          <div class="rec-num">—</div>
+          <div>
+            <div class="rec-name">不建議常規使用的止痛技術</div>
+            <div class="subitem"><div class="subitem-label">脊髓內類鴉片</div><div class="subitem-text">副作用（尿滯留、搔癢、呼吸抑制）大於止痛效益。</div></div>
+            <div class="subitem"><div class="subitem-label">硬脊膜外止痛</div><div class="subitem-text">副作用可能延遲恢復，不建議髖膝置換常規使用。</div></div>
+          </div>
+          <div class="rec-grade">
+            <div class="grade-spacer"></div>
+            <div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-notrec">不建議</span></div>
+            <div class="grade-line"><span class="pill ev-high">高／中</span><span class="pill rec-notrec">不建議</span></div>
+          </div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">05</div>
+          <div>
+            <div class="rec-name">局部浸潤止痛（LIA）與神經阻斷</div>
+            <div class="rec-body">膝關節置換建議使用 LIA；髖關節置換不建議。</div>
+            <div class="subitem"><div class="subitem-label">神經阻斷</div><div class="subitem-text">止痛效果與 LIA 相當，但易延遲活動、增加跌倒風險，不列為必要 ERAS 項目。</div></div>
+          </div>
+          <div class="rec-grade">
+            <div class="grade-line"><span class="pill ev-high">高</span><span class="pill rec-strong">強建議（膝）</span></div>
+            <div class="grade-line grade-sub-offset"><span class="pill rec-notrec">不建議</span></div>
+          </div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">06</div>
+          <div><div class="rec-name">術後噁心嘔吐（PONV）</div><div class="rec-body">應篩檢風險並給予多模式預防與治療。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">07</div>
+          <div><div class="rec-name">減少失血：Tranexamic acid</div><div class="rec-body">建議常規使用以減少失血與術後輸血需求。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-high">高</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">08</div>
+          <div>
+            <div class="rec-name">多模式口服止痛</div>
+            <div class="subitem"><div class="subitem-label">Paracetamol</div><div class="subitem-text">建議常規使用。</div></div>
+            <div class="subitem"><div class="subitem-label">NSAID</div><div class="subitem-text">無禁忌者建議常規使用。</div></div>
+            <div class="subitem"><div class="subitem-label">Gabapentinoid</div><div class="subitem-text">未證實降低疼痛，<b>不建議</b>作為常規輔助。</div></div>
+            <div class="subitem"><div class="subitem-label">補充性類鴉片</div><div class="subitem-text">需要時可用，但應限制 PCA 幫浦常規使用。</div></div>
+          </div>
+          <div class="rec-grade">
+            <div class="grade-spacer"></div>
+            <div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-strong">強建議</span></div>
+            <div class="grade-line"><span class="pill ev-high">高</span><span class="pill rec-strong">強建議</span></div>
+            <div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-notrec">不建議</span></div>
+            <div class="grade-line"><span class="pill ev-high">高</span><span class="pill rec-strong">強建議</span></div>
+          </div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">09</div>
+          <div><div class="rec-name">維持正常體溫</div><div class="rec-body">主動保溫維持正常體溫；<b>不建議</b>使用強制吹風式加溫（感染風險疑慮）。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-high">高</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">10</div>
+          <div><div class="rec-name">抗生素預防</div><div class="rec-body">依當地政策給予全身性抗生素預防。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">11</div>
+          <div><div class="rec-name">抗血栓預防</div><div class="rec-body">應早期下床＋依當地政策給予藥物／機械性預防。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+      </div>
+
+      <h4 class="sub">手術相關因子</h4>
+      <div class="rec-table">
+        <div class="rec-table-head"><div>編號</div><div>ERAS Society 建議內容</div><div>證據／強度</div></div>
+
+        <div class="rec-row">
+          <div class="rec-num">12</div>
+          <div><div class="rec-name">手術技術</div><div class="rec-body">無證據顯示特定入路／微創／義肢選擇／電腦導航能獨立加速出院，<b>不做特定建議</b>。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-high">高</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row notrec-row">
+          <div class="rec-num">—</div>
+          <div>
+            <div class="rec-name">不建議常規使用</div>
+            <div class="subitem"><div class="subitem-label">止血帶（膝關節）</div><div class="subitem-text">不減少總失血，反增加腫脹及併發症。</div></div>
+            <div class="subitem"><div class="subitem-label">引流管</div><div class="subitem-text">不建議常規使用。</div></div>
+          </div>
+          <div class="rec-grade">
+            <div class="grade-spacer"></div>
+            <div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-notrec">不建議</span></div>
+            <div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-notrec">不建議</span></div>
+          </div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">13</div>
+          <div><div class="rec-name">輸液管理</div><div class="rec-body">靜脈輸液應審慎使用，術後儘早改回口服。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+      </div>
+
+      <h4 class="sub">術後</h4>
+      <div class="rec-table">
+        <div class="rec-table-head"><div>編號</div><div>ERAS Society 建議內容</div><div>證據／強度</div></div>
+
+        <div class="rec-row notrec-row">
+          <div class="rec-num">—</div>
+          <div><div class="rec-name">導尿管</div><div class="rec-body"><b>不建議</b>常規使用；有用則應依殘尿量閾值（800 mL）評估儘早移除。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-notrec">不建議</span></div></div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">14</div>
+          <div><div class="rec-name">術後營養</div><div class="rec-body">建議儘早恢復正常飲食。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-low">低</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">15</div>
+          <div><div class="rec-name">早期下床活動</div><div class="rec-body">建議儘早下床活動，以利達成出院標準。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-mod">中</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">16</div>
+          <div><div class="rec-name">以標準為本的出院</div><div class="rec-body">用客觀出院標準（可自行穿衣、上下床、坐站、行走 &gt;70 公尺等）決定出院時機，而非住院天數。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-low">低</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+
+        <div class="rec-row">
+          <div class="rec-num">17</div>
+          <div><div class="rec-name">持續改善與稽核</div><div class="rec-body">建議定期內外部稽核流程遵從度、成本效益、病人滿意度。</div></div>
+          <div class="rec-grade"><div class="grade-line"><span class="pill ev-low">低</span><span class="pill rec-strong">強建議</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 4 ================= -->
+    <section id="s4">
+      <div class="sec-eyebrow">Section 04</div>
+      <h2 class="sec-title">四、「收案條件」的落差</h2>
+      <div class="callout">
+        <div class="callout-label">重要提醒</div>
+        <p>這兩篇 ERAS Society 指引本身<b>沒有</b>定義臨床病人的收案／排除條件。它們是「圍術期照護流程建議」，目標是所有接受該類選擇性手術的成人病人的照護標準化，<b>不是</b>用來篩選「誰適合走 ERAS 路徑」。</p>
+        <p>文中出現的「收案」，其實是指<b>文獻回顧時納入研究的條件</b>（如脊椎融合文中：納入 ≥18 歲、接受腰椎融合手術相關研究，排除非英文文獻），不是病人臨床收案準則。</p>
+        <p>脊椎融合文獻中，比較接近「收案範圍」的敘述是：指引<b>只涵蓋腰椎融合手術</b>，明確排除頸椎、前位手術、複雜畸形／脊柱側彎——即這些族群的手術不適用此指引的證據。髖膝關節置換文獻則完全沒有提出年齡、BMI、ASA 上限等排除標準，僅零星提到高齡、多重共病、心理疾患等次族群可能是 prehabilitation 等介入較有效的對象，但不是收案門檻。</p>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 5 ================= -->
+    <section id="s5">
+      <div class="sec-eyebrow">Section 05</div>
+      <h2 class="sec-title">五、台灣目前實際的 ERAS 收案條件</h2>
+
+      <h4 class="sub">（一）健保署官方給付計畫——115 年 8 月修正後已擴大為四大術式</h4>
+      <p>「全民健康保險術後加速康復推廣（ERAS）計畫」原於 114 年 6 月 6 日公告（健保醫字第 1140110839 號），當時僅涵蓋髖膝關節置換；<b>115 年 8 月 4 日健保醫字第 1150115782 號公告修正</b>後，已擴大納入<b>冠狀動脈繞道手術、肺臟重大手術、大腸直腸重大手術</b>，共計四大術式類別。</p>
+
+      <span class="badge-flag">共同收案門檻（四大術式皆適用）</span>
+      <table class="datatable">
+        <thead><tr><th style="width:2rem;">#</th><th>條件</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td>年齡 <b>70 歲以上</b>，且符合「適用術式」範圍</td></tr>
+          <tr><td class="num">2</td><td><b>於門診階段收案</b>，並於住院前完成跨職類評估與衛教</td></tr>
+          <tr><td class="num">3</td><td><b>排除急診轉住院個案</b></td></tr>
+          <tr><td class="num">4</td><td>僅<b>髖關節及膝關節置換手術</b>另需 ASA 麻醉風險分級<b>第三至四級</b>；其餘三術式未列 ASA 門檻</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <div class="callout-label">與復健／脊椎手術的關係</div>
+        <p>此次修正<b>仍未納入脊椎手術</b>，四大術式為髖膝關節置換、冠狀動脈繞道手術、肺臟重大手術、大腸直腸重大手術。完整的四術式 DRG／診療項目碼、團隊組成、給付架構，已整理成獨立頁面：</p>
+        <p style="margin-top:.8rem;"><a href="eras-tw-coverage.html" style="font-weight:700;">→ 台灣 ERAS 收案總覽：四大術式完整版（另開頁面）</a></p>
+      </div>
+
+      <h4 class="sub">（二）脊椎手術 ERAS 在台灣目前現況</h4>
+      <p>依查詢結果與本次修正公告確認，健保署目前的正式 ERAS 給付收案條件<b>仍未納入脊椎手術</b>。臺中榮總資料提及：自 2023 年起配合健保推動高齡關節置換 ERAS，「並逐步擴展至<b>大腸直腸、脊椎及肺部手術</b>」——本次修正已將大腸直腸、肺部手術正式納入，脊椎手術則尚未跟進，但方向上顯示未來仍有可能公告。</p>
+      <p>目前脊椎 ERAS 在台灣是以<b>醫學中心自行推動的院內臨床路徑</b>為主，例如臺北榮總「怡樂適療程」明確標示<b>適用胸腰椎手術，尤其是脊柱側彎長節手術</b>，且病人為<b>自願選擇加入</b>（醫師說明後可選擇是否參與），非強制、也非健保正式收案條件。</p>
+
+      <h4 class="sub">（三）自訂脊椎融合 ERAS 收案範圍的參考方向</h4>
+      <p>因台灣官方尚無公告的脊椎 ERAS 收案標準，以下方向綜合本文兩篇指引之「涵蓋範圍」與目前臨床常見做法整理，供草擬院內路徑參考（非官方硬性規定，需與貴院麻醉／骨科／脊椎外科團隊共同訂定）：</p>
+
+      <div class="two-col-note">
+        <div class="mini-card"><h5>建議納入</h5><p>選擇性（非急診）腰椎融合手術，節段數較少者（如 1–3 節）優先試行，符合原始指引的實證範圍。</p></div>
+        <div class="mini-card"><h5>建議排除</h5><p>頸椎手術、前位手術、複雜脊柱畸形／長節脊柱側彎矯正、創傷／急診手術——不在該篇實證範圍內，風險與照護需求也不同。</p></div>
+        <div class="mini-card"><h5>ASA 分級</h5><p>多數院內路徑以 ASA I–III 為主要收案對象；ASA IV 以上視個案由團隊評估後決定，與健保髖膝 ERAS「鎖定高風險 ASA III–IV」方向不同，脊椎手術風險組成不同，各院可自訂。</p></div>
+        <div class="mini-card"><h5>年齡</h5><p>脊椎 ERAS 較少單獨設年齡上下限，但高齡、體能衰弱、多重共病者建議加強術前評估與個管師介入。</p></div>
+      </div>
+    </section>
+
+    <!-- ================= SECTION 6 ================= -->
+    <section id="s6">
+      <div class="sec-eyebrow">Section 06</div>
+      <h2 class="sec-title">六、給復健科的臨床提醒</h2>
+      <p><b>早期下床活動</b>在兩篇指引中皆為強建議，是復健介入最直接相關的項目（脊椎融合：低證據但強建議；髖膝置換：中證據、強建議，且有明確量化出院標準——步行距離 &gt;70 公尺）。</p>
+      <p><b>Prehabilitation（術前復健）在兩篇指引中證據皆不足</b>，目前皆未列為正式建議，但都特別註明「高齡、體能衰弱、多重共病、心理疾患」等次族群可能是未來研究應聚焦、也可能較能受益的對象——這對復健科術前介入的臨床決策有參考價值。</p>
+      <p>脊椎融合指引特別點出「脊椎手術病人術前常已長期使用止痛藥物，術後止痛需求較高」，對應多模式止痛及早期活動計畫時應納入考量。</p>
+      <p>兩篇指引都提到<b>引流管、導尿管不建議常規使用</b>，這會影響病人下床活動的時機評估，復健介入時間可望更提早。</p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <h4>參考來源</h4>
+  <ol>
+    <li>Debono B, Wainwright TW, Wang MY, et al. Consensus statement for perioperative care in lumbar spinal fusion: Enhanced Recovery After Surgery (ERAS) Society recommendations. <i>The Spine Journal</i> 2021;21(5):729–752.</li>
+    <li>Wainwright TW, Gill M, McDonald DA, et al. Consensus statement for perioperative care in total hip replacement and total knee replacement surgery: Enhanced Recovery After Surgery (ERAS®) Society recommendations. <i>Acta Orthopaedica</i> 2020;91(1):3–19.</li>
+    <li>衛生福利部中央健康保險署《全民健康保險術後加速康復推廣計畫》，114 年 6 月 6 日健保醫字第 1140110839 號公告；<b>115 年 8 月 4 日健保醫字第 1150115782 號公告修正</b>。</li>
+    <li>台灣術後加速康復學會（TWERAS）公告資訊。</li>
+    <li>臺北榮民總醫院麻醉部／護理部「怡樂適療程」衛教資料。</li>
+    <li>臺中榮民總醫院術後加速康復中心網站。</li>
+  </ol>
+  <div class="footer-note">本頁為文獻整理與臨床應用摘要，非正式醫療指引，實際收案與臨床決策仍應依各院方案與最新公告為準。台灣健保 ERAS 四大術式完整收案細節，請見〈<a href="eras-tw-coverage.html">台灣 ERAS 收案總覽</a>〉。整理範圍與資料查核日期：2026 年 8 月 25 日。</div>
+</footer>
+
+</body>
+</html>
